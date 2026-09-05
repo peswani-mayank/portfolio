@@ -1,167 +1,372 @@
-# Mayank Peswani — Software Developer Portfolio
+<div align="center">
 
-A production-quality personal portfolio website built with **React**, **Vite**, **Tailwind CSS**, **Framer Motion**, and **Lucide React**. Designed specifically for technical recruiters and engineering managers, featuring a clean developer aesthetic, dark theme, interactive project breakdown modals, and an in-browser printable resume viewer.
+# ⚡ Developer Portfolio
+
+### Modern • Responsive • Interactive • Production-Ready
+
+Built with **React · Vite · Tailwind CSS · Framer Motion · Lucide React**
+
+<br>
+
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-FF0055?style=for-the-badge&logo=framer&logoColor=white)](https://motion.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+<br>
+
+<a href="https://portfolio-fawn-seven-87.vercel.app/">
+  <img src="https://img.shields.io/badge/🌐%20Live%20Portfolio-000000?style=for-the-badge" alt="Live Portfolio">
+</a>
+
+</div>
 
 ---
 
-## 🚀 Quick Start
+## ✨ Overview
 
-### 1. Prerequisites
-Ensure [Node.js](https://nodejs.org/) (v18+ recommended) is installed on your machine.
+A modern and production-ready developer portfolio website built to showcase software development projects, technical skills, professional experience, training, certifications, education, and open-source contributions.
 
-### 2. Installation
-Clone or navigate to the project directory and install the dependencies:
-```bash
+The portfolio focuses on a clean developer-centric experience with a responsive layout, smooth animations, interactive project sections, and a recruiter-friendly structure.
+
+### 🎯 Design Goals
+
+- Clean and professional developer interface
+- Modern dark-themed experience
+- Responsive across all screen sizes
+- Smooth and meaningful animations
+- Easy content management
+- Recruiter-friendly presentation
+- Fast and optimized production build
+
+---
+
+## 🚀 Features
+
+### 🎨 User Interface
+
+- Modern dark developer aesthetic
+- Responsive design
+- Clean typography
+- Interactive navigation
+- Smooth scrolling
+- Hover interactions
+- Animated section transitions
+- Mobile-friendly layout
+
+### 📂 Portfolio Sections
+
+- Hero
+- About
+- Technical Skills
+- Experience
+- Projects
+- Open Source Contributions
+- Training
+- Certifications
+- Education
+- Resume
+- Contact
+- Footer
+
+### 💡 Interactive Features
+
+- Interactive project cards
+- Detailed project breakdown modals
+- Project technology badges
+- GitHub repository links
+- Live project links
+- Framer Motion animations
+- Smooth UI transitions
+
+### 📄 Resume
+
+- Resume viewer
+- Resume download functionality
+- Printable resume interface
+- Centralized resume management
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **React.js** | Frontend UI development |
+| **Vite** | Development and build tooling |
+| **JavaScript** | Application logic |
+| **Tailwind CSS** | Styling and responsive design |
+| **Framer Motion** | Animations and transitions |
+| **Lucide React** | UI icons |
+| **Git** | Version control |
+| **GitHub** | Source code management |
+| **Vercel** | Deployment |
+
+---
+
+## 🧠 Architecture
+
+The application follows a **component-based and data-driven architecture**.
+
+```text
+                    ┌─────────────────┐
+                    │     App.jsx     │
+                    └────────┬────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              │              │              │
+              ▼              ▼              ▼
+        ┌───────────┐  ┌───────────┐  ┌───────────┐
+        │Components │  │   Data    │  │  Assets   │
+        └─────┬─────┘  └─────┬─────┘  └───────────┘
+              │              │
+       ┌──────┼──────┐   ┌───┼────────────┐
+       ▼      ▼      ▼   ▼   ▼            ▼
+     Navbar  Hero  About  Projects      Skills
+       │      │      │      │             │
+       └──────┴──────┴──────┴─────────────┘
+                         │
+                         ▼
+                    Portfolio UI
+
+📂 Project Structure
+portfolio/
+│
+├── public/
+│   └── resume/
+│       └── Mayank_Peswani_CV.pdf
+│
+├── src/
+│   │
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Training.jsx
+│   │   ├── Certifications.jsx
+│   │   ├── Education.jsx
+│   │   ├── OpenSource.jsx
+│   │   ├── ResumeCTA.jsx
+│   │   ├── Contact.jsx
+│   │   └── Footer.jsx
+│   │
+│   ├── data/
+│   │   ├── personalInfo.js
+│   │   ├── projects.js
+│   │   ├── skills.js
+│   │   ├── experience.js
+│   │   ├── education.js
+│   │   └── certifications.js
+│   │
+│   ├── assets/
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+├── vite.config.js
+└── README.md
+💻 Getting Started
+Prerequisites
+
+Make sure the following are installed:
+
+Node.js 18+
+npm
+Git
+
+Check your installed versions:
+
+node -v
+npm -v
+git --version
+1. Clone the Repository
+git clone <repository-url>
+2. Navigate to the Project
+cd <project-directory>
+3. Install Dependencies
 npm install
-```
-
-### 3. Start Local Development Server
-Launch the Vite hot-reloading development server:
-```bash
+4. Start the Development Server
 npm run dev
-```
-Open your browser and navigate to `http://localhost:5173/`.
 
-### 4. Build for Production
-Generate optimized static production assets inside the `dist/` directory:
-```bash
+The application will run at:
+
+http://localhost:5173
+🏗️ Production Build
+
+Create an optimized production build:
+
 npm run build
-```
 
-To preview the production bundle locally:
-```bash
+The generated production files will be available inside:
+
+dist/
+Preview Production Build
 npm run preview
-```
+✏️ Customization
 
----
+The portfolio uses a modular data-driven structure, making it easy to update content without modifying the main UI components.
 
-## 🛠️ How to Customize Your Portfolio
+Personal Information
+src/data/personalInfo.js
+Projects
+src/data/projects.js
+Skills
+src/data/skills.js
+Experience
+src/data/experience.js
+Education
+src/data/education.js
+Certifications
+src/data/certifications.js
 
-All data is structured modularly inside `src/data/` so you never have to edit JSX markup directly to change content.
+This approach keeps the application organized and makes future updates easier.
 
-### 1. How to Change Personal Information & Social Links
-Open [`src/data/personalInfo.js`](./src/data/personalInfo.js):
-```javascript
-export const personalInfo = {
-  name: "Mayank Peswani",
-  primaryTitle: "Software Developer",
-  headline: "Software Developer | Full-Stack Developer | Open Source Contributor",
-  location: "Sikar, Rajasthan, India",
-  academicLocation: "Phagwara, Punjab, India",
-  email: "peswani.mayank11@gmail.com",
-  phone: "+91 8302005875",
-  linkedin: "https://www.linkedin.com/in/mayank-peswani/",
-  github: "https://github.com/peswani-mayank",
-  resumePath: "/resume/Mayank_Peswani_CV.pdf",
-  bio: "...",
-  // ...
-};
-```
-Editing this updates your Navbar, Hero, About, Contact cards, and Resume modal across the entire website.
+🧩 Adding a New Project
 
-### 2. How to Add or Edit Projects
-Open [`src/data/projects.js`](./src/data/projects.js). Add a new project object to the array:
-```javascript
+Add a project object inside:
+
+src/data/projects.js
+
+Example:
+
 {
-  id: "new-project-id",
-  title: "Project Title",
-  status: "Live", // or "In Development"
+  id: "project-id",
+  title: "Project Name",
+  status: "Live",
   date: "Month Year",
-  category: "Full-Stack & AI",
-  summary: "Brief one-line summary",
-  description: "Detailed description of the problem and solution...",
+  category: "Full-Stack",
+  summary: "Short project summary",
+  description: "Detailed project description",
+
   features: [
-    "Key feature 1",
-    "Key feature 2"
+    "Feature one",
+    "Feature two",
+    "Feature three"
   ],
+
   technicalImplementation: [
-    "Architecture decision 1...",
-    "Database schema and caching details..."
+    "Technical implementation detail",
+    "Architecture decision"
   ],
-  technologies: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
-  github: "https://github.com/peswani-mayank/your-repo",
-  liveDemo: "https://your-deployment.vercel.app", // leave empty "" if not deployed yet
-  themeColor: "from-cyan-500/20 to-blue-600/20",
-  accentBadge: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10",
-  visualType: "travel" // or "ai-terminal"
+
+  technologies: [
+    "React.js",
+    "Node.js",
+    "MongoDB"
+  ],
+
+  github: "",
+  liveDemo: ""
 }
-```
+📄 Resume Setup
 
-### 3. How to Add Your Resume PDF
-1. Save your resume PDF file as:
-   ```
-   Mayank_Peswani_CV.pdf
-   ```
-2. Place it directly inside the `public/resume/` directory:
-   ```
-   public/
-   └── resume/
-       └── Mayank_Peswani_CV.pdf
-   ```
-The portfolio's "Download Resume" buttons and links will automatically point to `/resume/Mayank_Peswani_CV.pdf`. If the file is not yet uploaded, visitors can still click "View Resume" to see and print your full interactive resume on screen!
+Place the resume PDF inside:
 
-### 4. How to Add or Update Certifications
-Open [`src/data/certifications.js`](./src/data/certifications.js):
-```javascript
-{
-  id: "certification-id",
-  title: "Certification Title",
-  issuer: "Issuing Organization",
-  date: "Month Year",
-  credentialType: "Professional Certification",
-  skills: ["Skill 1", "Skill 2"],
-  badgeColor: "from-amber-500/20 to-orange-500/20",
-  badgeBorder: "border-amber-500/30",
-  badgeText: "text-amber-400"
-}
-```
+public/
+└── resume/
+    └── Mayank_Peswani_CV.pdf
 
-### 5. How to Add or Update Skills
-Open [`src/data/skills.js`](./src/data/skills.js) to add or adjust competencies under:
-- `Programming Languages`
-- `Frameworks & Libraries`
-- `Databases & Tools`
-- `Core Concepts`
-- `AI / ML`
-- `Soft Skills`
+The resume can then be accessed using:
 
----
+/resume/Mayank_Peswani_CV.pdf
 
-## 🌐 Deployment Guide
+This enables the portfolio to provide resume viewing and downloading functionality.
 
-### Deploying to Vercel (Recommended)
-1. Push your repository to your GitHub account: `github.com/peswani-mayank/portfolio`.
-2. Go to [Vercel](https://vercel.com/) and click **"Add New Project"**.
-3. Import your GitHub repository.
-4. Framework Preset will be automatically detected as **Vite**.
-5. Click **Deploy**. Your portfolio will be live with free global CDN and SSL in less than 60 seconds!
+🌐 Deployment
+▲ Vercel
 
-### Deploying to Netlify
-1. Go to [Netlify](https://www.netlify.com/) and click **"Import from Git"**.
-2. Select your repository.
-3. Build command: `npm run build`
-4. Publish directory: `dist`
-5. Click **Deploy**.
+The portfolio is optimized for deployment on Vercel.
 
-### Deploying to GitHub Pages
-1. Install `gh-pages`:
-   ```bash
-   npm install gh-pages --save-dev
-   ```
-2. In `vite.config.js`, set `base: '/portfolio/'` (matching your repo name).
-3. Add deploy script in `package.json`:
-   ```json
-   "scripts": {
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d dist"
-   }
-   ```
-4. Run:
-   ```bash
-   npm run deploy
-   ```
+Push the repository to GitHub.
+Open Vercel.
+Select Add New → Project.
+Import the GitHub repository.
+Vercel automatically detects the Vite configuration.
+Click Deploy.
+Build Command
+npm run build
+Output Directory
+dist
+🌐 Live Portfolio
 
----
+View Live Portfolio →
 
-## 📄 License & Attribution
-Designed and developed for Mayank Peswani. All rights reserved © 2026.
+⚡ Performance
+
+The project follows modern frontend performance practices:
+
+Vite production builds
+Optimized assets
+Reusable React components
+Lightweight animations
+Minimal unnecessary dependencies
+Responsive layouts
+Efficient rendering
+Production-optimized bundle
+♿ Accessibility
+
+The interface follows common accessibility practices:
+
+Semantic HTML
+Proper heading hierarchy
+Keyboard-friendly interactions
+Accessible navigation
+Visible focus states
+Descriptive labels
+Responsive typography
+Reduced-motion considerations
+Accessible UI components
+🔍 SEO
+
+The project is structured with SEO considerations including:
+
+Semantic HTML
+Descriptive page title
+Meta description
+Proper heading hierarchy
+Open Graph metadata
+Favicon support
+Search-engine-friendly structure
+🔮 Future Improvements
+ GitHub API integration
+ Dynamic GitHub contribution statistics
+ Project filtering
+ Developer blog
+ Contact form backend
+ Email notifications
+ Custom domain
+ Analytics integration
+ Additional project case studies
+ Dark / Light theme toggle
+🤝 Contributing
+
+This is primarily a personal portfolio project, but suggestions and improvements are welcome.
+
+If you discover an issue:
+
+Open an issue.
+Describe the problem clearly.
+Include relevant screenshots or details.
+Suggest a possible improvement if applicable.
+📜 License
+
+This project is intended for personal portfolio use.
+
+© 2026 All Rights Reserved.
+
+<div align="center">
+⭐ Like this project?
+
+Give the repository a star if you find it useful!
+
+<br>
+
+Built with React, creativity, and continuous learning.
+
+</div> ```
