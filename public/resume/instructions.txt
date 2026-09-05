@@ -1,0 +1,2 @@
+Place your PDF resume named "Mayank_Peswani_CV.pdf" inside this directory (/public/resume/).
+The portfolio will automatically link to and download /resume/Mayank_Peswani_CV.pdf!
