@@ -2,6 +2,8 @@
 
 # ⚡ Mayank Peswani
 
+### 🚀 Full-Stack Developer | AI Enthusiast | Open Source Contributor
+
 ### 🚀 Developer Portfolio
 
 A modern, responsive portfolio showcasing my **projects, technical skills, experience, and open-source journey**.
