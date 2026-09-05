@@ -8,7 +8,17 @@ A modern, responsive portfolio showcasing my **projects, technical skills, exper
 
 <br>
 
-[🌐 **Live Portfolio**](https://portfolio-fawn-seven-87.vercel.app/) &nbsp; • &nbsp; [💻 **GitHub**](https://github.com/peswani-mayank) &nbsp; • &nbsp; [🔗 **LinkedIn**](https://www.linkedin.com/in/mayank-peswani/)
+<a href="https://portfolio-fawn-seven-87.vercel.app/" target="_blank">
+  🌐 <strong>Live Portfolio</strong>
+</a>
+&nbsp; • &nbsp;
+<a href="https://github.com/peswani-mayank" target="_blank">
+  💻 <strong>GitHub</strong>
+</a>
+&nbsp; • &nbsp;
+<a href="https://www.linkedin.com/in/mayank-peswani/" target="_blank">
+  🔗 <strong>LinkedIn</strong>
+</a>
 
 <br><br>
 
