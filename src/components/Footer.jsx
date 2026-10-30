@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Mail, Heart } from 'lucide-react';
+import { ArrowUp, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/personalInfo';
 
@@ -9,20 +9,20 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#070a12] border-t border-slate-900 py-12 text-slate-400">
+    <footer className="bg-white/50 backdrop-blur-md border-t border-teal-100/80 py-12 text-slate-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-850">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100">
           
           {/* Identity & Subtitle */}
           <div className="text-center md:text-left space-y-1">
-            <div className="text-lg font-bold text-white flex items-center justify-center md:justify-start gap-2">
+            <div className="text-lg font-bold text-slate-900 flex items-center justify-center md:justify-start gap-2">
               <span>{personalInfo.name}</span>
-              <span className="text-xs font-mono text-cyan-400 px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20">
+              <span className="text-xs font-mono text-teal-800 px-2 py-0.5 rounded bg-teal-500/10 border border-teal-300/60 font-semibold">
                 {personalInfo.initials}
               </span>
             </div>
-            <p className="text-xs sm:text-sm text-slate-400">
+            <p className="text-xs sm:text-sm text-slate-600">
               {personalInfo.headline}
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-colors"
+              className="p-2.5 rounded-xl bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-teal-300 transition-colors shadow-xs"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
@@ -44,7 +44,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-[#0077b5] hover:border-[#0077b5]/40 transition-colors"
+              className="p-2.5 rounded-xl bg-white border border-slate-200 text-slate-600 hover:text-[#0077b5] hover:border-sky-300 transition-colors shadow-xs"
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>
@@ -52,14 +52,14 @@ export default function Footer() {
             <a
               href={`mailto:${personalInfo.email}`}
               aria-label="Email"
-              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+              className="p-2.5 rounded-xl bg-white border border-slate-200 text-slate-600 hover:text-teal-700 hover:border-teal-300 transition-colors shadow-xs"
             >
               <Mail className="w-4 h-4" />
             </a>
 
             <button
               onClick={scrollToTop}
-              className="p-2.5 rounded-xl bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-slate-300 transition-all ml-3 group"
+              className="p-2.5 rounded-xl bg-teal-50 hover:bg-gradient-to-r hover:from-teal-500 hover:to-sky-600 hover:text-white text-teal-700 transition-all ml-3 group border border-teal-200/80 shadow-xs"
               title="Scroll to top"
               aria-label="Scroll to top"
             >
@@ -74,8 +74,8 @@ export default function Footer() {
           <div>
             © 2026 {personalInfo.name}. All rights reserved.
           </div>
-          <div className="flex items-center gap-1">
-            <span>Engineered with React, Vite & Tailwind CSS</span>
+          <div className="flex items-center gap-1 text-teal-700">
+            <span>My Digital Twin — An Interactive Developer Universe</span>
           </div>
         </div>
 

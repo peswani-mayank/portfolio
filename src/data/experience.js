@@ -14,7 +14,7 @@ export const experiences = [
     technologies: [
       "Git",
       "GitHub",
-      "Pull Requests",
+      "Pull Requests", 
       "Code Reviews",
       "Issue Tracking",
       "Debugging",

@@ -14,7 +14,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ResumeModal from './components/ResumeModal';
 import BackgroundEffect from './components/BackgroundEffect';
-
+import HeroScene from './components/HeroScene';
 export default function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
@@ -27,15 +27,20 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#090d16] text-slate-100 flex flex-col font-sans selection:bg-cyan-500/20 selection:text-cyan-300">
-      {/* Ambient background effect */}
+    <div className="relative min-h-screen bg-gradient-to-b from-[#f0fdfa] via-[#f0f9ff] to-[#ecfdf5] text-slate-800 flex flex-col font-sans selection:bg-teal-500/20 selection:text-teal-900">
+      {/* Ambient Arctic Mint & Glacier Blue lighting */}
       <BackgroundEffect />
 
-      {/* Navigation */}
+      {/* Persistent single transparent 3D Canvas across the entire universe */}
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+        <HeroScene />
+      </div>
+
+      {/* Navigation - Fixed top bar above all content */}
       <Navbar onOpenResume={handleOpenResume} />
 
       {/* Main Content Sections */}
-      <main className="flex-1 w-full">
+      <main className="relative z-10 flex-1 w-full">
         <Hero onOpenResume={handleOpenResume} />
         <About />
         <Skills />

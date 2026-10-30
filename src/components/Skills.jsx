@@ -89,19 +89,19 @@ export default function Skills() {
     : skillCategories.filter(cat => cat.id === activeCategory);
 
   return (
-    <section id="skills" className="py-20 bg-[#090d16] relative">
+    <section id="skills" className="py-20 bg-white/40 backdrop-blur-sm relative border-t border-teal-100/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono font-medium text-cyan-400 mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-300/60 text-xs font-mono font-medium text-teal-800 mb-3">
             <span>EXPERTISE & TOOLING</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Technical Skills
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mt-4 rounded-full" />
-          <p className="mt-4 text-slate-400 text-sm sm:text-base">
+          <div className="w-12 h-1 bg-gradient-to-r from-teal-500 to-sky-600 mx-auto mt-4 rounded-full" />
+          <p className="mt-4 text-slate-600 text-sm sm:text-base">
             Categorized technical capabilities, core computer science concepts, frameworks, and developer workflows.
           </p>
         </div>
@@ -112,8 +112,8 @@ export default function Skills() {
             onClick={() => setActiveCategory('all')}
             className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${
               activeCategory === 'all'
-                ? 'bg-cyan-500 text-slate-950 font-semibold shadow-md shadow-cyan-500/25'
-                : 'bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800'
+                ? 'bg-gradient-to-r from-teal-500 to-sky-600 text-white font-semibold shadow-md shadow-teal-500/20'
+                : 'bg-white/80 text-slate-700 hover:text-teal-900 hover:bg-white border border-teal-200/80 shadow-xs'
             }`}
           >
             All Categories ({skillCategories.length})
@@ -124,8 +124,8 @@ export default function Skills() {
               onClick={() => setActiveCategory(cat.id)}
               className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all ${
                 activeCategory === cat.id
-                  ? 'bg-cyan-500 text-slate-950 font-semibold shadow-md shadow-cyan-500/25'
-                  : 'bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800'
+                  ? 'bg-gradient-to-r from-teal-500 to-sky-600 text-white font-semibold shadow-md shadow-teal-500/20'
+                  : 'bg-white/80 text-slate-700 hover:text-teal-900 hover:bg-white border border-teal-200/80 shadow-xs'
               }`}
             >
               {cat.title}
@@ -140,16 +140,16 @@ export default function Skills() {
             return (
               <div
                 key={category.id}
-                className="rounded-2xl bg-slate-900/50 border border-slate-800/80 hover:border-slate-700 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/5 group text-left"
+                className="rounded-2xl bg-white/70 backdrop-blur-md border border-teal-100/90 hover:border-teal-300 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl shadow-xs group text-left"
               >
                 <div>
                   {/* Category Card Header */}
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-slate-800/90 border border-slate-700/60 flex items-center justify-center text-cyan-400 group-hover:scale-105 transition-transform">
+                    <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200/80 flex items-center justify-center text-teal-700 group-hover:scale-105 transition-transform">
                       <CatIcon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors">
+                      <h3 className="text-base font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
                         {category.title}
                       </h3>
                       <span className="text-[11px] font-mono text-slate-500">
@@ -158,7 +158,7 @@ export default function Skills() {
                     </div>
                   </div>
 
-                  <p className="text-xs text-slate-400 mb-5 leading-relaxed">
+                  <p className="text-xs text-slate-600 mb-5 leading-relaxed">
                     {category.description}
                   </p>
 
@@ -169,9 +169,9 @@ export default function Skills() {
                       return (
                         <div
                           key={sIdx}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/60 hover:bg-slate-800 border border-slate-700/50 hover:border-cyan-500/40 text-slate-200 text-xs font-medium transition-all group/badge hover:-translate-y-0.5"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-50/70 hover:bg-teal-100/80 border border-teal-200/60 hover:border-teal-300 text-slate-800 text-xs font-medium transition-all group/badge hover:-translate-y-0.5"
                         >
-                          <SkillIcon className="w-3.5 h-3.5 text-cyan-400 group-hover/badge:scale-110 transition-transform" />
+                          <SkillIcon className="w-3.5 h-3.5 text-teal-600 group-hover/badge:scale-110 transition-transform" />
                           <span>{skill.name}</span>
                         </div>
                       );
@@ -179,9 +179,9 @@ export default function Skills() {
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
                   <span>Verified Skillset</span>
-                  <span className="text-cyan-400/80">Ready to Deploy</span>
+                  <span className="text-teal-700 font-semibold">Ready to Deploy</span>
                 </div>
               </div>
             );
