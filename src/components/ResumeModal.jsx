@@ -15,14 +15,6 @@ export default function ResumeModal({ isOpen, onClose }) {
     window.print();
   };
 
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = personalInfo.resumePath;
-    link.download = 'Mayank_Peswani_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-md animate-in fade-in duration-200">
@@ -49,14 +41,15 @@ export default function ResumeModal({ isOpen, onClose }) {
               <span>Print / Save</span>
             </button>
 
-            <button
-              onClick={handleDownload}
+            <a
+              href={personalInfo.resumePath}
+              download="Mayank_Peswani_CV.pdf"
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-teal-500 to-sky-600 hover:from-teal-600 hover:to-sky-700 transition-all shadow-xs"
               title="Download PDF"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Download PDF</span>
-            </button>
+            </a>
 
             <button
               onClick={onClose}

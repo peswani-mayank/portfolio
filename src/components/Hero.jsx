@@ -10,18 +10,7 @@ import {
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/personalInfo';
 
-export default function Hero({ onOpenResume }) {
-  const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = personalInfo.resumePath;
-    link.download = 'Mayank_Peswani_CV.pdf';
-
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    onOpenResume();
-  };
+export default function Hero({ onOpenResume: _onOpenResume }) {
 
   const handleScrollToProjects = (e) => {
     e.preventDefault();
@@ -111,14 +100,14 @@ export default function Hero({ onOpenResume }) {
                 <ArrowRight className="h-4 w-4" />
               </a>
 
-              <button
-                type="button"
-                onClick={handleDownloadResume}
+              <a
+                href={personalInfo.resumePath}
+                download="Mayank_Peswani_CV.pdf"
                 className="group inline-flex items-center gap-2 rounded-xl border border-teal-200/90 bg-white/80 px-5 py-3.5 text-sm font-semibold text-slate-700 transition-all hover:border-teal-400 hover:bg-white hover:text-teal-700 shadow-xs cursor-pointer"
               >
                 <Download className="h-4 w-4 text-teal-600 transition-transform group-hover:translate-y-0.5" />
                 <span>Download Resume</span>
-              </button>
+              </a>
             </div>
 
             {/* Social links */}

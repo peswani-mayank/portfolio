@@ -3,15 +3,6 @@ import { FileText, Download, Eye } from 'lucide-react';
 import { personalInfo } from '../data/personalInfo';
 
 export default function ResumeCTA({ onOpenResume }) {
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = personalInfo.resumePath;
-    link.download = 'Mayank_Peswani_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    onOpenResume();
-  };
 
   return (
     <section className="py-16 bg-white/40 backdrop-blur-sm relative border-t border-teal-100/70">
@@ -44,13 +35,14 @@ export default function ResumeCTA({ onOpenResume }) {
                 <span>View Resume</span>
               </button>
 
-              <button
-                onClick={handleDownload}
+              <a
+                href={personalInfo.resumePath}
+                download="Mayank_Peswani_CV.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-slate-700 bg-white hover:bg-slate-50 hover:text-teal-800 border border-slate-200 hover:border-teal-300 transition-all shadow-xs group"
               >
                 <Download className="w-4 h-4 text-teal-600 group-hover:translate-y-0.5 transition-transform" />
                 <span>Download Resume</span>
-              </button>
+              </a>
             </div>
 
             <div className="pt-3 text-xs font-mono text-slate-500">
